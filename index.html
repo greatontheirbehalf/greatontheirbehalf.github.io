@@ -1,113 +1,566 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>My New Site</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.111.3">
-    
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Great on Their Behalf — School Board Governance Framework</title>
+  <meta name="description" content="The Great on Their Behalf framework gives school boards a clear, evidence-based picture of their governance across five practice areas — and a measurable path to getting better.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+    :root {
+      --navy:    #1A3A5C;
+      --navy-lt: #2E618B;
+      --navy-dk: #0F2538;
+      --ice:     #EBF2F8;
+      --rule:    #C8D8E8;
+      --white:   #FFFFFF;
+      --body:    #222222;
+      --muted:   #5A6E80;
+    }
 
+    html { scroll-behavior: smooth; }
 
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--body);
+      background: var(--white);
+      line-height: 1.6;
+    }
 
-    
-    
-    
-      
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--navy-dk);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 56px;
+    }
 
-    
+    .nav-brand {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
 
-    
-    
-      <link href="/index.xml" rel="alternate" type="application/rss+xml" title="My New Site" />
-      <link href="/index.xml" rel="feed" type="application/rss+xml" title="My New Site" />
-      
-    
-    
-    <meta property="og:title" content="My New Site" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://ajc7.com/" />
-<meta itemprop="name" content="My New Site">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="My New Site"/>
-<meta name="twitter:description" content=""/>
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
 
-	
-  </head>
+    .nav-links a {
+      color: #B8D0E8;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
 
-  <body class="ma0 avenir bg-near-white">
+    .nav-links a:hover { color: var(--white); }
 
-    
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: 6rem 2rem 5rem;
+      text-align: center;
+    }
 
-  <header>
-    <div class="pb3-m pb6-l bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        My New Site
-      
-    </a>
-    <div class="flex-l items-center">
-      
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7FAFD4;
+      margin-bottom: 1.5rem;
+    }
 
-      
-      
-<div class="ananke-socials">
-  
-</div>
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 800;
+      line-height: 1.15;
+      max-width: 760px;
+      margin: 0 auto 1.5rem;
+      letter-spacing: -0.02em;
+    }
 
-    </div>
-  </div>
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #B8D0E8;
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      font-weight: 400;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--white);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.875rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .btn-primary:hover {
+      background: var(--ice);
+      transform: translateY(-1px);
+    }
+
+    .hero-note {
+      margin-top: 1.25rem;
+      font-size: 0.8rem;
+      color: #6A9ABF;
+    }
+
+    /* ── WHAT IT MEANS ── */
+    .what {
+      background: var(--white);
+      padding: 5rem 2rem;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .what h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .what p {
+      font-size: 1.1rem;
+      color: var(--body);
+      margin-bottom: 1.25rem;
+      line-height: 1.75;
+    }
+
+    blockquote {
+      margin: 2.5rem 0 0;
+      padding: 1.5rem 2rem;
+      background: var(--ice);
+      border-left: 4px solid var(--navy);
+      text-align: left;
+      border-radius: 0 4px 4px 0;
+    }
+
+    blockquote p {
+      font-size: 1rem;
+      color: var(--navy-dk);
+      font-weight: 500;
+      margin: 0 0 0.5rem;
+      font-style: italic;
+    }
+
+    blockquote cite {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* ── FIVE PRACTICES ── */
+    .practices {
+      background: var(--ice);
+      padding: 5rem 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy-lt);
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .practices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .practice-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 1.75rem 1.5rem;
+    }
+
+    .practice-number {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--navy-lt);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .practice-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .practice-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ── TWO PATHS ── */
+    .paths {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .paths-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 700px) {
+      .paths-grid { grid-template-columns: 1fr; }
+    }
+
+    .path-card {
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .path-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1.5rem;
+    }
+
+    .path-header .tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #7FAFD4;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .path-header h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .path-body {
+      padding: 1.75rem 1.5rem;
+      background: var(--white);
+    }
+
+    .path-body p {
+      font-size: 0.95rem;
+      color: var(--body);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .btn-secondary:hover { background: var(--navy-lt); }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      border: 2px solid var(--navy);
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-outline:hover {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    /* ── BOOK STRIP ── */
+    .book-strip {
+      background: var(--ice);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 3.5rem 2rem;
+    }
+
+    .book-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .book-inner { flex-direction: column; text-align: center; }
+    }
+
+    .book-text h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .book-text p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .book-badge {
+      flex-shrink: 0;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 6px;
+      padding: 0.75rem 1.25rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      min-width: 120px;
+    }
+
+    .book-badge .title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-style: italic;
+      margin-bottom: 0.25rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy-dk);
+      color: #7FAFD4;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    footer a {
+      color: #7FAFD4;
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--white); }
+
+    .footer-brand {
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    /* ── RESPONSIVE NAV ── */
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      nav { padding: 0 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="/">Great on Their Behalf</a>
+  <ul class="nav-links">
+    <li><a href="#practices">The Framework</a></li>
+    <li><a href="#districts">For Districts</a></li>
+    <li><a href="#practitioners">For Practitioners</a></li>
+  </ul>
 </nav>
 
-      <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          My New Site
-        </h1>
-        
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-eyebrow">School Board Governance</span>
+  <h1>Every board says students come first.<br>This is how you know if that's true.</h1>
+  <p>The Great on Their Behalf framework gives school boards a clear, evidence-based picture of their governance — and a measurable path to getting better.</p>
+  <a href="https://www.effectiveschoolboards.com/gotb-free/" class="btn-primary">Take the Free Self-Assessment</a>
+  <p class="hero-note">10 minutes &nbsp;·&nbsp; Free &nbsp;·&nbsp; Instant results across all five practice areas</p>
+</section>
+
+<!-- WHAT IT MEANS -->
+<section class="what" id="about">
+  <h2>What "great on their behalf" actually means</h2>
+  <p>
+    Most school boards are composed of well-meaning people who ran for office because they care about kids. That's not the problem. The problem is that caring isn't a governance practice — and good intentions don't close achievement gaps.
+  </p>
+  <p>
+    Governing well on behalf of students is specific. It means the board's time, attention, and resources are consistently pointed at student outcomes — not adult comfort, operational turf, or institutional inertia. That's harder than it sounds, and it's measurable.
+  </p>
+  <blockquote>
+    <p>"The most effective boards I've worked with aren't necessarily the ones with the most experienced trustees. They're the ones who've gotten specific about what it means to govern for students — and who hold that discipline even when it's uncomfortable."</p>
+    <cite>— AJ Crabill, <em>Great on Their Behalf</em></cite>
+  </blockquote>
+</section>
+
+<!-- FIVE PRACTICES -->
+<section class="practices" id="practices">
+  <div class="section-header">
+    <span class="section-eyebrow">The Framework</span>
+    <h2>Five governance practice areas</h2>
+    <p>The Great on Their Behalf framework measures board governance across five evidence-based practices. Together, they define what it means to lead a district on behalf of students.</p>
+  </div>
+
+  <div class="practices-grid">
+    <div class="practice-card">
+      <div class="practice-number">Practice 1</div>
+      <h3>Focus Mindset</h3>
+      <p>The board keeps its attention on student outcomes — not adult interests, operational details, or institutional politics. Every meeting, every vote, every conversation runs through the same filter: what's best for students?</p>
+    </div>
+    <div class="practice-card">
+      <div class="practice-number">Practice 2</div>
+      <h3>Clarify Priorities</h3>
+      <p>The board sets specific, measurable goals tied to student learning — and holds those goals firm. Not 14 strategic priorities. Not aspirational language. Clear targets the district is accountable to.</p>
+    </div>
+    <div class="practice-card">
+      <div class="practice-number">Practice 3</div>
+      <h3>Monitor Progress</h3>
+      <p>The board tracks whether goals are being achieved with real data, not anecdotes. It asks the right questions, pushes for honest answers, and acts when the data demands it.</p>
+    </div>
+    <div class="practice-card">
+      <div class="practice-number">Practice 4</div>
+      <h3>Align Resources</h3>
+      <p>The board directs money, time, and attention toward its stated priorities — not toward everything at once. Budget decisions and policy decisions connect back to the goals the board has set.</p>
+    </div>
+    <div class="practice-card">
+      <div class="practice-number">Practice 5</div>
+      <h3>Communicate Results</h3>
+      <p>The board is transparent with its community about what's working, what isn't, and why. Governance in the open builds trust. Governance behind closed doors erodes it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TWO PATHS -->
+<section class="paths">
+  <div class="section-header">
+    <span class="section-eyebrow">Two ways to engage</span>
+    <h2>Where do you fit?</h2>
+  </div>
+
+  <div class="paths-grid">
+
+    <div class="path-card" id="districts">
+      <div class="path-header">
+        <span class="tag">For School Boards &amp; Districts</span>
+        <h3>Start with the Free Self-Assessment</h3>
+      </div>
+      <div class="path-body">
+        <p>
+          Any board member can take the Great on Their Behalf Self-Assessment in about ten minutes. You'll get an instant score across all five practice areas and a clear readout of where your board's governance gaps are.
+        </p>
+        <p>
+          The Self-Assessment is indicative, not clinically validated — it's self-scored and unmoderated. Every screen says so. But it's built on the same five-practice rubric as the validated Certified Assessment, and it gives you something real to work with.
+        </p>
+        <a href="https://www.effectiveschoolboards.com/gotb-free/" class="btn-secondary">Take the free self-assessment →</a>
       </div>
     </div>
-  </header>
 
+    <div class="path-card" id="practitioners">
+      <div class="path-header">
+        <span class="tag">For Education Consultants &amp; Coaches</span>
+        <h3>Become a Certified Practitioner</h3>
+      </div>
+      <div class="path-body">
+        <p>
+          The Certified Great on Their Behalf Practitioner credential is the gold standard for governance coaching. Certified Practitioners administer the validated Certified Assessment — nationally benchmarked, scored by Devon — and receive inbound leads through the ESB network.
+        </p>
+        <p>
+          Practitioners pay tuition to join and a royalty on engagements. In exchange, they carry a credential built on a nationally recognized framework and a scalable practice that doesn't depend on their own visibility.
+        </p>
+        <a href="https://effectiveschoolboards.com" class="btn-outline">Learn about certification →</a>
+      </div>
+    </div>
 
-    <main class="pb7" role="main">
-      
- <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-    
-  </article>
-  
-  
-  
-  
-  
-  
-  
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://ajc7.com/" >
-    &copy;  My New Site 2023 
-  </a>
-    <div>
-<div class="ananke-socials">
-  
-</div>
-</div>
   </div>
+</section>
+
+<!-- BOOK STRIP -->
+<div class="book-strip">
+  <div class="book-inner">
+    <div class="book-text">
+      <h3>The book behind the framework</h3>
+      <p>
+        <em>Great on Their Behalf</em> by AJ Crabill is the foundational text for this framework. Board members, superintendents, and governance coaches have used it to change how school boards operate — and how they think about their role. Available wherever books are sold.
+      </p>
+    </div>
+    <div class="book-badge">
+      <div class="title">Great on Their Behalf</div>
+      <div>AJ Crabill</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Effective School Boards, LLC</div>
+  <div>
+    The Great on Their Behalf framework is the intellectual property of Effective School Boards, LLC. All rights reserved.<br>
+    <a href="https://effectiveschoolboards.com">effectiveschoolboards.com</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.effectiveschoolboards.com/privacy-policy/">Privacy Policy</a>
+  </div>
+  <div style="margin-top:0.75rem; color: #4A7A9E; font-size:0.8rem;">© 2026 Effective School Boards, LLC</div>
 </footer>
 
-  </body>
+</body>
 </html>
